@@ -1,0 +1,26 @@
+<app-head-component title="Task Overview"></app-head-component>
+
+
+<div class="row rand">
+    <div class="week col-sm coloana">
+        <div class="header-component">
+            <mat-icon [ngStyle]="{'color': color1}">keyboard_arrow_down</mat-icon>
+            <p [ngStyle]="{'color': color1}"> This Week</p>
+        </div>
+    </div>
+    <div class="col-sm coloana" *ngFor="let d of divs">
+        <div class="header-component" [style.color]="">
+            <p>{{d}}</p>
+        </div>
+    </div>
+</div>
+
+
+<app-task title = "Ecran Login" stats="(Tataruca);[(HTML5, #D7E4FF).(5,#D7E4FF)]"></app-task>
+<app-task title = "Ecran TaskOverview" stats="(Teodorescu);[(HTML5, #D7E4FF).(4,#D7E4FF)];[(CSS, #F0D7FF,).(5,#F0D7FF)]"></app-task>
+<app-task title = "Ecran TaskOverview" stats="(Teodorescu);[(HTML5, #D7E4FF).(4,#D7E4FF)];[(CSS, #F0D7FF,).(5,#F0D7FF)];[(HTML5, #D7E4FF).(4,#D7E4FF)];[(HTML5, #D7E4FF).(4,#D7E4FF)]"></app-task>
+
+
+<!-- <cdk-virtual-scroll-viewport appendOnly itemSize="50" class="example-viewport">
+    <div *cdkVirtualFor="let item of items" class="example-item">{{item}}</div>
+  </cdk-virtual-scroll-viewport> -->

@@ -1,0 +1,38 @@
+
+div{
+    color: rgb(49, 49, 49);
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+}
+
+p{
+    margin:0;
+    white-space: nowrap;
+}
+
+.week p{
+    font-weight: bold;
+}
+.week mat-icon{
+    color:#DF5BF5;
+}
+
+.header-component{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+
+.example-viewport {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+  }
+  
+  .example-item {
+    height: 50px;
+  }

@@ -1,0 +1,83 @@
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-table"></i>
+            {{title}}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <ng-container *ngFor="let t of Xs">
+              <li *ngIf="t.title != title">
+                <a class="dropdown-item" routerLink="{{t.link}}">{{t.title}}</a>
+              </li>
+            </ng-container>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="d-flex align-items-center">
+      <a class="text-reset me-3" href="#">
+        <i class="fas fa-filter"></i>
+      </a>
+      <div class="dropdown">
+        <a
+          class="text-reset me-3 dropdown-toggle hidden-arrow"
+          href="#"
+          id="navbarDropdownMenuLink"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-user"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+        <li>
+          <a class="dropdown-item" href="#">My profile</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Settings</a>
+        </li>
+        <li>
+          <a class="dropdown-item" routerLink="/SignIn">Logout</a>
+        </li>
+      </ul>
+      </div>
+      <div class="new-item">
+        <button
+        type="button"
+        class="item btn btn-primary dropdown-toggle btn-rounded"
+        data-mdb-toggle="dropdown"
+        aria-expanded="false"
+        >
+        New Item
+      </button>
+      </div>
+    </div>
+  </div>
+</nav>
+

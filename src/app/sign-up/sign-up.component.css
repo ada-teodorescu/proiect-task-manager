@@ -1,0 +1,56 @@
+
+
+.flex{
+    display: flex;
+    margin: 300px auto;
+    max-width: 600px;
+    box-shadow: 5px 2px 20px #000000;
+    border-radius:50px;
+    font-family: 'Comic Sans MS';
+    letter-spacing: 0.5px;
+    
+}
+
+.Sign-up{
+    line-height: 50px;
+    padding: 40px 70px 40px 70px;
+    color: #A70CA1;
+}
+.down-part{
+    text-align: center;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+
+.Slogan{
+    padding: 40px 70px 40px 70px;
+    border-radius: 50px;
+    background: rgb(105,6,101);
+    background: linear-gradient(0deg, rgba(105,6,101,1) 0%, rgba(255,0,245,1) 100%);
+    text-align: center;
+    color: #ffff;
+    
+}
+button{
+    letter-spacing: 1px;
+    font-family: 'Comic Sans MS';
+    border: 1px solid #A70CA1;
+    box-shadow: 0PX 2PX 4PX #000;
+
+}
+
+input{
+    padding: 0.6em 3em;
+    border-radius: 30PX;
+    border: 1px solid #A70CA1;
+    box-shadow: 0px 1px 3px #000;
+    margin-bottom: 2em;
+}
+::placeholder{
+    color: #A70CA1;
+}
+#emailicon{
+    background:url(/images/email.png) left no-repeat;
+}

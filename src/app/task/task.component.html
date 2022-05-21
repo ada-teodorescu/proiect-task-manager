@@ -1,0 +1,42 @@
+<div class="row rand">
+    <div class="col-sm coloana">
+        <div class="first-component" [ngStyle]="{'background-color': bgColor,'border-left-color': baraColor}">  
+            <p class="text-center">{{title}}</p>
+            <mat-icon *ngIf="icon != ''">{{icon}}</mat-icon>
+        </div>
+    </div>
+    <div class="col-sm coloana" *ngFor="let status of statusuri" >
+        
+            <ng-container *ngIf="!status.isGroup();then statusComponent; else groupStatusComponent"> 
+
+            </ng-container>
+
+            <ng-template #statusComponent >
+                <div class="last-component" [ngStyle]="{'background-color': status.bgColor}">
+                    <mat-icon *ngIf="status.icon != ''">{{status.icon}}</mat-icon>
+                    <p>{{status.title}}</p>  
+                </div>
+                 
+            </ng-template>
+
+            <ng-template #groupStatusComponent>
+                <div class="last-component">
+                    <div class="last-component" [ngStyle]="{'background-color': status.bgColor}">
+                        <mat-icon *ngIf="status.status1.icon != ''">{{status.status1.icon}}</mat-icon>
+                        <p>{{status.status1.title}}</p> 
+                    </div>
+                    <hr>
+                    <div class="last-component" [ngStyle]="{'background-color': status.bgColor}">
+                        <mat-icon *ngIf="status.status2.icon != ''">{{status.status2.icon}}</mat-icon>
+                        <p>{{status.status2.title}}</p>  
+                    </div>    
+                </div>   
+            </ng-template>     
+    </div>
+    <div *ngIf="addMode" class="col-sm coloana">
+        <div class="plus">
+            <mat-icon>add_circle_outline</mat-icon>
+        </div> 
+    </div>  
+</div>
+

@@ -1,0 +1,17 @@
+.wrap{
+    width:fit-content;
+    margin: auto;
+}
+
+.row{
+    position: relative;
+    top:2em;
+    
+}
+
+.col{
+    padding: 0;
+    margin:2.5em;
+}
+
+

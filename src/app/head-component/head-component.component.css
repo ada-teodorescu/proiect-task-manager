@@ -1,0 +1,19 @@
+.navbar{
+    background-color: white;
+    padding:1.5em 1em;
+}
+
+.fa-filter, .fa-user{
+    margin-right: 3em;
+}
+
+#navbarDropdownMenuLink{
+    color: #339DFF;
+    font-weight: bold;
+}
+
+.item{
+    border-radius: 20px;
+    width: 9em;
+    background-color: #339DFF;
+}
