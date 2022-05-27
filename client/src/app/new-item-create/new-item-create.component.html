@@ -1,0 +1,41 @@
+
+<button (click)="openVerticallyCentered(content)"
+type="button"
+class="item btn btn-primary dropdown-toggle btn-rounded"
+aria-expanded="false"
+>
+New Item
+</button>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Create task</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      </button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="new_item_form" (ngSubmit)="onSubmit()">
+        <div class="md-form">
+          <input mdbInput type="text" id="form-task-name" class="form-control" formControlName="title">
+          <label for="form-task-name" class="">Task name</label>
+        </div>
+        <div class="md-form">
+          <input mdbInput type="text" id="form-task-name" class="form-control" formControlName="stats">
+          <label for="form-task-name" class="">Stats</label>
+        </div>
+        <div class="md-form">
+          <input mdbInput type="text" id="form-task-name" class="form-control" formControlName="priority">
+          <label for="form-task-name" class="">Priority</label>
+        </div>
+        <div class="md-form">
+          <input mdbInput type="text" id="form-task-name" class="form-control" formControlName="deadline">
+          <label for="form-task-name" class="">Deadline</label>
+        </div>
+        <div class="md-form">
+          <input mdbInput type="text" id="form-task-name" class="form-control" formControlName="est">
+          <label for="form-task-name" class="">Estimated time for task</label>
+        </div>
+        <button type="submit" class="btn btn-light">Apply</button>
+      </form>
+    </div>
+</ng-template>

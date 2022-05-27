@@ -1,0 +1,20 @@
+
+<div class="row rand">
+    <div class="week col-sm coloana">
+        <div class="header-component">
+            <mat-icon [ngStyle]="{'color': color1}">keyboard_arrow_down</mat-icon>
+            <p [ngStyle]="{'color': color1}"> This Week</p>
+        </div>
+    </div>
+    <div class="col-sm coloana" *ngFor="let d of divs">
+        <div class="header-component">
+            <p>{{d}}</p>
+        </div>
+    </div>
+</div>
+
+<div *ngFor="let task of tasks">
+    <app-task title = {{task.title}} stats={{task.stats}}></app-task>
+</div>
+
+
